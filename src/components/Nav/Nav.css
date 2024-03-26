@@ -1,6 +1,7 @@
 .nav-link {
     text-decoration: none;
     color: whitesmoke;
+    font-family: "Georgia", "Helvetica", "Arial", sans-serif;
 }
 
 .active {

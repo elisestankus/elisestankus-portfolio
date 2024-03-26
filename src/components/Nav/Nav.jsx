@@ -61,8 +61,8 @@ function Nav(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
-            <AppBar component="nav" sx={{backgroundColor: 'rgba(80, 131, 80)'}}>
+            
+            <AppBar component="nav" sx={{backgroundColor: 'rgb(74 107 74)'}}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -100,7 +100,7 @@ function Nav(props) {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'rgba(80, 131, 80, 0.837)' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'rgba(74, 107, 74, 0.837)' },
                     }}
                 >
                     {drawer}

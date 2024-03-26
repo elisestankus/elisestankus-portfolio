@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(115, 147, 115);
+  font-family: "Georgia", "Helvetica", "Arial", sans-serif;
+  color: whitesmoke
+}
+
