@@ -13,6 +13,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import './Nav.css'
+
 const drawerWidth = 240;
 const navItems = [
     {
@@ -29,8 +31,9 @@ const navItems = [
     }
 ];
 
-function Nav() {
+function Nav(props) {
     const currentPage = useLocation().pathname;
+    const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -41,21 +44,25 @@ function Nav() {
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item.name} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <Link style={{ textDecoration: 'none' }} className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
+                    <ListItem key={item.name} disablePadding >
+                        <Link className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>
+                        <ListItemButton sx={{ textAlign: 'center', width: drawerWidth }}>
+                            {item.name}
+                            
                         </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
         </Box>
     );
 
+    const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar component="nav" sx={{backgroundColor: 'rgba(80, 131, 80)'}}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -76,7 +83,7 @@ function Nav() {
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button key={item.name} sx={{ color: '#fff' }}>
-                                <Link style={{ textDecoration: 'none' }} className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
+                                <Link className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
                             </Button>
                         ))}
                     </Box>
@@ -84,6 +91,7 @@ function Nav() {
             </AppBar>
             <nav>
                 <Drawer
+                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
@@ -92,7 +100,7 @@ function Nav() {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'rgba(80, 131, 80, 0.837)' },
                     }}
                 >
                     {drawer}
