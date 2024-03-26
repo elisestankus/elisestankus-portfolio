@@ -1,5 +1,5 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +16,20 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+    {
+        name: "Home",
+        path: '/'
+    },
+    {
+        name: "About Me",
+        path: "/AboutMe"
+    },
+    {
+        name: "Work",
+        path: "/Work"
+    }
+];
 
 function Nav(props) {
     const { window } = props;
@@ -28,15 +41,11 @@ function Nav(props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
-            </Typography>
-            <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
+                    <ListItem key={item.name} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
+                            <Link style={{ textDecoration: 'none' }} to={item.path}>{item.name}</Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -65,12 +74,12 @@ function Nav(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                      
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
-                                {item}
+                            <Button key={item.name} sx={{ color: '#fff' }}>
+                                <Link style={{ textDecoration: 'none' }} to={item.path}>{item.name}</Link>
                             </Button>
                         ))}
                     </Box>
