@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -29,8 +29,8 @@ const navItems = [
     }
 ];
 
-function Nav(props) {
-    const { window } = props;
+function Nav() {
+    const currentPage = useLocation().pathname;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -43,7 +43,7 @@ function Nav(props) {
                 {navItems.map((item) => (
                     <ListItem key={item.name} disablePadding>
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <Link style={{ textDecoration: 'none' }} to={item.path}>{item.name}</Link>
+                            <Link style={{ textDecoration: 'none' }} className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -51,7 +51,6 @@ function Nav(props) {
         </Box>
     );
 
-    const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -77,7 +76,7 @@ function Nav(props) {
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button key={item.name} sx={{ color: '#fff' }}>
-                                <Link style={{ textDecoration: 'none' }} to={item.path}>{item.name}</Link>
+                                <Link style={{ textDecoration: 'none' }} className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
                             </Button>
                         ))}
                     </Box>
@@ -85,7 +84,6 @@ function Nav(props) {
             </AppBar>
             <nav>
                 <Drawer
-                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
