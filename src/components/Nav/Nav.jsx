@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -14,6 +14,23 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 import './Nav.css'
+
+
+function ElevationScroll(props) {
+    const { children, window } = props;
+    const trigger = useScrollTrigger({
+      disableHysteresis: true,
+      threshold: 0,
+      target: window
+    });
+  
+    return React.cloneElement(children, {
+      elevation: trigger ? 4 : 0,
+      style: {
+        backgroundColor: trigger? 'rgba(74, 107, 74, 0.837)' : 'rgb(115, 147, 115)'
+      }
+    });
+  }
 
 const drawerWidth = 240;
 const navItems = [
@@ -60,9 +77,10 @@ function Nav(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
+     
         <Box sx={{ display: 'flex' }}>
-            
-            <AppBar component="nav" sx={{backgroundColor: 'rgb(74 107 74)'}}>
+            <ElevationScroll {...props} >
+            <AppBar component="nav" sx={{backgroundColor: 'rgb(115, 147, 115)'}}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -89,6 +107,8 @@ function Nav(props) {
                     </Box>
                 </Toolbar>
             </AppBar>
+            </ElevationScroll>
+            
             <nav>
                 <Drawer
                     container={container}
@@ -107,6 +127,7 @@ function Nav(props) {
                 </Drawer>
             </nav>
         </Box>
+        
     );
 }
 
