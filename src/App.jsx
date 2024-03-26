@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
+import Box from '@mui/material/Box';
 import Nav from './components/Nav/Nav';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -8,10 +9,10 @@ function App() {
   return (
     <>
       <Nav />
-      <main className="mx-3">
+      <Box component="main" sx={{ m: 5, p: 3 }}>
         <Outlet />
-      </main>
-      <Footer />
+      </Box>
+      {/* <Footer /> */}
     </>
   )
 }
