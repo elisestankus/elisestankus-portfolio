@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Box component="main" sx={{ m: 5, p: 3 }}>
+      <Box component="main" sx={{ my: 10, mx: 5, p: 3 }}>
         <Outlet />
       </Box>
       {/* <Footer /> */}
