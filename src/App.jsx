@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Nav from './components/Nav/Nav';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <Box component="main" sx={{ my: 10, mx: 5, p: 3 }}>
         <Outlet />
       </Box>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
