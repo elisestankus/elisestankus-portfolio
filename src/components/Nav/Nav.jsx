@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import logo from '../../assets/logo.svg';
 
 import './Nav.css'
 
@@ -85,6 +86,7 @@ function Nav(props) {
             <ElevationScroll {...props} >
                 <AppBar component="nav" sx={{ backgroundColor: 'rgb(115, 147, 115)' }}>
                     <Toolbar>
+                    <img src={logo}></img>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
