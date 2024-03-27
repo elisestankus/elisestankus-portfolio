@@ -14,36 +14,37 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 import './Nav.css'
+import { ListItemText } from '@mui/material';
 
 
 function ElevationScroll(props) {
     const { children, window } = props;
     const trigger = useScrollTrigger({
-      disableHysteresis: true,
-      threshold: 0,
-      target: window
+        disableHysteresis: true,
+        threshold: 0,
+        target: window
     });
-  
+
     return React.cloneElement(children, {
-      elevation: trigger ? 4 : 0,
-      style: {
-        backgroundColor: trigger? 'rgba(74, 107, 74, 0.837)' : 'rgb(115, 147, 115)'
-      }
+        elevation: trigger ? 4 : 0,
+        style: {
+            backgroundColor: trigger ? 'rgba(74, 107, 74, 0.837)' : 'rgb(115, 147, 115)'
+        }
     });
-  }
+}
 
 const drawerWidth = 240;
 const navItems = [
     {
-        name: "Home",
+        name: "HOME",
         path: '/'
     },
     {
-        name: "About Me",
+        name: "ABOUT ME",
         path: "/AboutMe"
     },
     {
-        name: "Work",
+        name: "WORK",
         path: "/Work"
     }
 ];
@@ -62,11 +63,13 @@ function Nav(props) {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.name} disablePadding >
-                        <Link className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>
-                        <ListItemButton sx={{ textAlign: 'center', width: drawerWidth }}>
-                            {item.name}
-                            
-                        </ListItemButton>
+                        <Link to={item.path} className='nav-link'>
+                            <ListItemButton sx={{ textAlign: 'center', width: drawerWidth }}>
+                                <h4 className={currentPage === item.path ? 'nav-link sidebar-active' : 'nav-link'}>
+                                    {item.name}
+                                </h4>
+
+                            </ListItemButton>
                         </Link>
                     </ListItem>
                 ))}
@@ -77,38 +80,42 @@ function Nav(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-     
+
         <Box sx={{ display: 'flex' }}>
             <ElevationScroll {...props} >
-            <AppBar component="nav" sx={{backgroundColor: 'rgb(115, 147, 115)'}}>
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                      
-                    </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Button key={item.name} sx={{ color: '#fff' }}>
-                                <Link className={currentPage === item.path ? 'nav-link active' : 'nav-link'} to={item.path}>{item.name}</Link>
-                            </Button>
-                        ))}
-                    </Box>
-                </Toolbar>
-            </AppBar>
+                <AppBar component="nav" sx={{ backgroundColor: 'rgb(115, 147, 115)' }}>
+                    <Toolbar>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            edge="start"
+                            onClick={handleDrawerToggle}
+                            sx={{ mr: 2, display: { sm: 'none' } }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography
+                            variant="h6"
+                            component="div"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+
+                        </Typography>
+                        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            {navItems.map((item) => (
+                                <Button key={item.name} sx={{ color: '#fff' }}>
+                                    <Link className="nav-link" to={item.path}>
+                                        <h4 className={currentPage === item.path ? 'nav-link active' : 'nav-link'}>
+                                            {item.name}
+                                        </h4>
+                                    </Link>
+                                </Button>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </AppBar>
             </ElevationScroll>
-            
+
             <nav>
                 <Drawer
                     container={container}
@@ -127,7 +134,7 @@ function Nav(props) {
                 </Drawer>
             </nav>
         </Box>
-        
+
     );
 }
 
