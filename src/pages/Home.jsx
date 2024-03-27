@@ -1,52 +1,34 @@
+import * as React from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Box from "@mui/material/Box";
+import  Typography  from "@mui/material/Typography";
+import  TextField  from "@mui/material/TextField";
+import { grey } from '@mui/material/colors';
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#f5f5f5',
+        },
+    },
+})
+
+
 export default function Home() {
+
+    
+    
     return (
         <div>
-            <h2>Home Page</h2>
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-            <br />
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-            <br />
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-            <br />
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-            <br />
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
-            <br />
+            <Box alignItems="center">
+            <Typography variant="h1" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>Welcome!</Typography>
+            <Typography variant="h1" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>I'm Elise Stankus,</Typography>
+            <Typography variant="h2" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>a full-stack web developer.</Typography>
+            <ThemeProvider theme={theme}>
+            <TextField label="Enter your name!" size='small' variant="outlined" color='primary' sx={{my: 3,  border: 0, fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}} focused />
+            </ThemeProvider>
+            </Box>
+            
         </div>
     );
 }
