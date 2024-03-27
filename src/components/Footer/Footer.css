@@ -1,0 +1,12 @@
+footer {
+    position: sticky;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin-bottom: 0;
+}
