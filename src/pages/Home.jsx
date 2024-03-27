@@ -25,7 +25,7 @@ export default function Home() {
             <Typography variant="h1" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>I'm Elise Stankus,</Typography>
             <Typography variant="h2" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>a full-stack web developer.</Typography>
             <ThemeProvider theme={theme}>
-            <TextField label="Enter your name!" size='small' variant="outlined" color='primary' sx={{my: 3,  border: 0, fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}} focused />
+            <TextField label="Enter your name!" size='small' variant="outlined" color='primary' InputLabelProps={{sx: {fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}} sx={{my: 3, input: {color: 'whitesmoke'}}} InputProps={{sx: {fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif', }}}focused />
             </ThemeProvider>
             </Box>
             
