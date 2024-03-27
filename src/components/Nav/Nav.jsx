@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 import './Nav.css'
-import { ListItemText } from '@mui/material';
+
 
 
 function ElevationScroll(props) {
@@ -88,9 +88,9 @@ function Nav(props) {
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
-                            edge="start"
+                            edge="end"
                             onClick={handleDrawerToggle}
-                            sx={{ mr: 2, display: { sm: 'none' } }}
+                            sx={{ mr: 2, display: { sm: 'none' }, marginLeft: 'auto' }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -127,8 +127,9 @@ function Nav(props) {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'rgba(74, 107, 74, 0.837)' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: 'rgba(74, 107, 74, 0.837)'},
                     }}
+                    anchor='right'
                 >
                     {drawer}
                 </Drawer>
