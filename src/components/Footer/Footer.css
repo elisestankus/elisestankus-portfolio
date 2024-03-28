@@ -1,6 +1,6 @@
 footer {
     position: sticky;
-    height: 55px;
+    min-height: 8vh;
     width: 100%;
     text-align: center;
     align-items: center;

@@ -40,9 +40,9 @@ export default function Home() {
     return (
         <div>
             <Box alignItems="center">
-            <Typography variant="h1" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>Welcome{comma}{userName}!</Typography>
-            <Typography variant="h1" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>I'm Elise Stankus,</Typography>
-            <Typography variant="h2" sx={{fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>a full-stack web developer.</Typography>
+            <Typography variant="h1" sx={{fontSize: {xs: '3.5rem', sm: '5rem'}, fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>Welcome{comma}{userName}!</Typography>
+            <Typography variant="h1" sx={{fontSize: {xs: '3.5rem', sm: '5rem'},fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>I'm Elise Stankus,</Typography>
+            <Typography variant="h2" sx={{fontSize: {xs: '3rem', sm: '4rem'},fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}>a full-stack web developer.</Typography>
             <ThemeProvider theme={theme}>
             <TextField 
             label="Enter your name!"
@@ -57,7 +57,6 @@ export default function Home() {
             onChange={handleInputChange}/>
             </ThemeProvider>
             </Box>
-            
         </div>
     );
 }
