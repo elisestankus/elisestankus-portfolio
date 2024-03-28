@@ -7,6 +7,13 @@
 body {
   background-color: rgb(115, 147, 115);
   font-family: "Georgia", "Helvetica", "Arial", sans-serif;
-  color: whitesmoke
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
 }
 
