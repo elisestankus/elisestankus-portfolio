@@ -1,15 +1,22 @@
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper'
+
 export default function Work() {
     return (
         <div>
             <h2>Work Page</h2>
-            <p>
-                Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-                Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-                mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-                lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-                imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-                in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-            </p>
+            <br />
+            < Grid container spacing={3}>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Paper> item!</Paper>
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Paper> item 2!</Paper>
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <Paper> third item !</Paper>
+                </Grid>
+            </Grid>
         </div>
     );
 }
