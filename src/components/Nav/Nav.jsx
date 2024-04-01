@@ -84,7 +84,7 @@ function Nav(props) {
 
         <Box sx={{ display: 'flex' }}>
             <ElevationScroll {...props} >
-                <AppBar component="nav" sx={{ backgroundColor: 'rgb(115, 147, 115)', minHeight: '10vh' }}>
+                <AppBar component="nav" sx={{ backgroundColor: 'rgb(115, 147, 115)'}}>
                     <Toolbar>
                     <img src={logo}></img>
                         <IconButton
