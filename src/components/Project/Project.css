@@ -3,11 +3,6 @@
     border-radius: 3%;
 }
 
-.projectTitle {
-    border: 2px solid rgb(115, 147, 115);
-    border-radius: 3%;
-    
-}
 
 .projectPaper:hover {
     box-shadow: 5px 5px 5px 0 rgb(168, 185, 168);
