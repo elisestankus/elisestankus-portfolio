@@ -9,7 +9,7 @@ import ccScreenshot from '../../assets/ccScreenshot.png';
 import './Project.css'
 
 function ProjectCard() {
-    const [showOverlay, setShowOverlay] = useState(true);
+    const [showOverlay, setShowOverlay] = useState(false);
 
     const theme = createTheme({
         palette: {
