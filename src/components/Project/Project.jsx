@@ -9,7 +9,7 @@ import ccScreenshot from '../../assets/ccScreenshot.png';
 import './Project.css'
 
 function ProjectCard() {
-    const [showOverlay, setShowOverlay] = useState(false);
+    const [showOverlay, setShowOverlay] = useState(true);
 
     const theme = createTheme({
         palette: {
@@ -27,11 +27,11 @@ function ProjectCard() {
                     <div className='projectOverlay'>
                         <div className='projectText'>
                         <ThemeProvider theme={theme}>
-                        <Typography variant='h4' sx={{ fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif', color: '#f5f5f5', fontSize: {xs: '1.5rem', sm: '1.6rem', md: '1.4rem'}}}>Crystal Clarity</Typography>
-                        <Typography variant="h7" sx={{ fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif', color: '#f5f5f5', fontSize: {xs: '1rem', sm: '1rem', md:'.85rem'}}}>A personal wellness application collaboratively developed using the MERN stack. </Typography>
+                        <Typography variant='h4' sx={{ fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif', color: '#f5f5f5', fontSize: {xs: '1.5rem', sm: '1.6rem', md: '1.4rem', lg: '1.7rem'}}}>Crystal Clarity</Typography>
+                        <Typography variant="h7" sx={{ fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif', color: '#f5f5f5', fontSize: {xs: '1rem', sm: '1rem', md:'.85rem', lg: '1.1rem'}}}>A personal wellness application collaboratively developed using the MERN stack. </Typography>
                         <br />
-                        <Button variant='outlined' size='small' color='primary' sx={{m: {xs: .25, sm: 1}, fontSize: {xs: '.7rem', sm: '.6rem', md: '.65rem'}, fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}} href="https://github.com/elisestankus">Visit website</Button>
-                        <Button variant='outlined' size='small' color='primary' sx={{m: {xs: .25, sm: 1}, fontSize: {xs: '.7rem', sm: '.6rem', md: '.65rem'},fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}href="https://github.com/elisestankus">Github repo</Button>
+                        <Button variant='outlined' size='small' color='primary' sx={{m: {xs: .25, sm: 1}, fontSize: {xs: '.7rem', sm: '.6rem', md: '.65rem', lg: '.8rem'}, fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}} href="https://github.com/elisestankus">Visit website</Button>
+                        <Button variant='outlined' size='small' color='primary' sx={{m: {xs: .25, sm: 1}, fontSize: {xs: '.7rem', sm: '.6rem', md: '.65rem', lg: '.8rem'},fontFamily: '"Georgia", "Helvetica", "Arial", sans-serif'}}href="https://github.com/elisestankus">Github repo</Button>
                         </ThemeProvider>
                         </div>
                     </div>
