@@ -4,17 +4,28 @@
 }
 
 .projectPaper {
-    position: relative
+    position: relative;
+    
 }
 
-.projectText {
+.projectOverlay {
     background-color: rgba(66, 68, 66, 0.818);
     position: absolute;
     height: 100%;
+    width: 100%;
     bottom: 0;
     border-radius: 1%;
     padding: 2%;
     text-align: center;
+   
+    
+}
+
+.projectText {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
 }
 
 
