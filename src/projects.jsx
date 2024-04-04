@@ -22,9 +22,9 @@ const projects = [
     {
         imagePath: mjScreenshot,
         title: 'Movie Journal',
-        description: 'A habit-tracking application for coders collaboratively built using MySQL, Handlebars, Express, and Node.js. ',
-        deployedURL: 'https://hacker-grove-215ce88624e3.herokuapp.com/',
-        githubRepo: 'https://github.com/elisestankus/hacker-grove.git'
+        description: 'A front-end movie journal application collaboratively built using HTML, CSS, JavaScript, and Bulma. ',
+        deployedURL: 'https://sav-the-sag.github.io/movie_project/',
+        githubRepo: 'https://github.com/elisestankus/movie_journal.git'
         
     }
 
