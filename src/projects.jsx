@@ -2,6 +2,7 @@ import ccScreenshot from './assets/ccScreenshot.png';
 import hgScreenshot from './assets/hgScreenshot.png'
 import mjScreenshot from './assets/mjScreenshot.png'
 import coderCoveScreenshot from './assets/coderCoveScreenshot.png'
+import svgGenScreenshot from './assets/svgGenScreenshot.png'
 
 const projects = [
     {
@@ -34,6 +35,14 @@ const projects = [
         description: 'A full stack blog application independently built using MySQL, Handlebars, Express, and Node.js.',
         deployedURL: 'https://coder-cove-105ba26a819d.herokuapp.com/',
         githubRepo: 'https://github.com/elisestankus/coder-cove.git'
+
+    },
+    {
+        imagePath: svgGenScreenshot,
+        title: 'SVG Logo Generator',
+        description: 'A command-line SVG logo generator application independently built using Node.js and Inquirer. Tested using Jest.',
+        deployedURL: 'https://drive.google.com/file/d/1W7tLVVeBCkozPAY0LiwH4jdmb_3NMVFY/view?usp=sharing',
+        githubRepo: 'https://github.com/elisestankus/SVG-logo-generator.git'
 
     }
 
