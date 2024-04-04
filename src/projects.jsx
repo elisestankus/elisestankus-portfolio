@@ -22,7 +22,7 @@ const projects = [
     {
         imagePath: mjScreenshot,
         title: 'Movie Journal',
-        description: 'A front-end movie journal application collaboratively built using HTML, CSS, JavaScript, and Bulma. ',
+        description: 'A front-end movie journal application collaboratively built using HTML, CSS, JavaScript, Bulma, the  OMDB API, and the YouTube API. ',
         deployedURL: 'https://sav-the-sag.github.io/movie_project/',
         githubRepo: 'https://github.com/elisestankus/movie_journal.git'
         
