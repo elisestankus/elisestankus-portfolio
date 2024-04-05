@@ -1,0 +1,34 @@
+.screenshot {
+    border: 3px solid whitesmoke;
+    border-radius: 3%;
+}
+
+.projectPaper {
+    position: relative;
+    
+}
+
+.projectOverlay {
+    background-color: rgba(66, 68, 66, 0.818);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    border-radius: 1%;
+    padding: 2%;
+    text-align: center;
+   
+    
+}
+
+.projectText {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+.projectPaper:hover {
+    box-shadow: 5px 5px 5px 0 rgb(168, 185, 168);
+}
