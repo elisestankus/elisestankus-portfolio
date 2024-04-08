@@ -7,7 +7,7 @@ export default function AboutMe() {
         <div>
             <Typography variant="h2" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>About Me</Typography>
             <br />
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+            <Stack direction={{ xs: 'column-reverse', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
             <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
                 Hi there! I'm Elise, a full-stack web developer currently residing in the San Francisco Bay Area. 
                 From designing clean, elegant front-ends to building efficient, robust back-ends, web development allows me to engage my creative side and apply my strong problem-solving skills. 
