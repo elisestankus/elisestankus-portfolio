@@ -86,7 +86,7 @@ function Nav(props) {
             <ElevationScroll {...props} >
                 <AppBar component="nav" sx={{ backgroundColor: 'rgb(115, 147, 115)'}}>
                     <Toolbar>
-                    <img src={logo}></img>
+                    <img src={logo} alt="svg logo, ES in a circle"></img>
                         <IconButton
                             color="inherit"
                             aria-label="open drawer"
