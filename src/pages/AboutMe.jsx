@@ -8,7 +8,7 @@ export default function AboutMe() {
         <div>
             <Typography variant="h2" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>About Me</Typography>
             <br />
-            <Stack direction={{ sm: 'column-reverse', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+            <Stack direction={{ xs: 'column-reverse', sm: 'column-reverse', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                 <div>
                 <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
                     Hi there! I'm Elise, a full-stack web developer currently residing in the San Francisco Bay Area. 
@@ -24,7 +24,7 @@ export default function AboutMe() {
                     </Typography>
                     <br />
                     <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
-                    I’ve always been a fast learner, diving deep into acquiring new skills – whether it’s teaching myself to knit, learning a new language, or developing my programming skills. From the UC Berkeley program I now have a solid foundation in the MERN stack, as well as experience with a diverse foundation of front-end and back-end technologies. In addition to the technologies and languages listed below, I am also currently learning AWS and Python.
+                    I’ve always been a fast learner, diving deep into acquiring new skills – whether it’s teaching myself to knit, learning a new language, or developing my programming skills. From the UC Berkeley program I now have a solid foundation in the MERN stack, as well as experience with a diverse collection of front-end and back-end technologies. In addition to the technologies and languages listed below, I am also currently learning AWS and Python.
                     </Typography>
                     <br />
                     <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
