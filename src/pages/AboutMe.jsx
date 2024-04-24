@@ -1,5 +1,6 @@
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
+import Paper from '@mui/material/Paper';
 import headshot from '../assets/headshot.png';
 
 export default function AboutMe() {
@@ -7,7 +8,7 @@ export default function AboutMe() {
         <div>
             <Typography variant="h2" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>About Me</Typography>
             <br />
-            <Stack direction={{ xs: 'column-reverse', sm: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+            <Stack direction={{ sm: 'column-reverse', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                 <div>
                 <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
                     Hi there! I'm Elise, a full-stack web developer currently residing in the San Francisco Bay Area. 
@@ -31,6 +32,136 @@ export default function AboutMe() {
                 </Typography>
                 </div>
                 <img src={headshot} alt="picture of me." height="300px" width="250px" ></img>
+            </Stack>
+            <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 0 }} justifyContent="space-evenly" sx={{paddingTop: 2}}>
+                <Paper sx={{backgroundColor:'rgba(245, 245, 245, .8)', p: 1, textAlign: 'center', width: {sm: '100%', md: '25%'}}} >
+                    <Typography variant="h5" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                    Languages 
+                    </Typography>
+                    <br />
+                    
+               
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        HTML
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        CSS
+                    </Typography>
+                    <br/>
+                    
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        JavaScript
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        SQL
+                    </Typography>
+                 
+                   
+                </Paper>
+                <Paper sx={{backgroundColor:'rgba(245, 245, 245, .8)', p: 1,  textAlign: 'center', width: {sm: '100%', md: '25%'}}}>
+                    <Typography variant="h5" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Front-End Tech
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        React
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Handlebars
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Bootstrap
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Material UI
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Bulma
+                    </Typography>
+                   
+                </Paper>
+                <Paper sx={{backgroundColor:'rgba(245, 245, 245, .8)', p: 1,  textAlign: 'center', width: {sm: '100%', md: '25%'}}}>
+                <Typography variant="h5" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Back-End Tech
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Express.js
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Node.js
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        MongoDB
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        MySQL
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        GraphQL
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        JWT
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Bcrypt
+                    </Typography>
+                    <br />
+                </Paper>
+                <Paper sx={{backgroundColor:'rgba(245, 245, 245, .8)', p: 1,  textAlign: 'center', width: {sm: '100%', md: '25%'}}}>
+                <Typography variant="h5" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                       Additional Tools
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Jest
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Insomnia
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Netlify
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Heroku
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Render
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        Git
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        VS Code
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        API integration
+                    </Typography>
+                    <br />
+                    <Typography variant="h7" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
+                        JQuery
+                    </Typography>
+                    <br />
+                </Paper>
             </Stack>
         </div>
     );
