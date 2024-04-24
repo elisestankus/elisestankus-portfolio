@@ -1,0 +1,6 @@
+<svg width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <g>
+            <circle cx="20" cy="20" r="19" fill="rgb(115, 147, 115)" stroke-width="5"/>
+        <text x="4" y="30" font-family="Cambria" font-size="30" fill="rgba(245,245,245, 0.70)">ES</text>
+        </g>
+ </svg>
