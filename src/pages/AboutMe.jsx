@@ -33,7 +33,7 @@ export default function AboutMe() {
                 </div>
                 <img src={headshot} alt="picture of me." height="300px" width="250px" ></img>
             </Stack>
-            <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 0 }} justifyContent="space-evenly" sx={{paddingTop: 2}}>
+            <Stack direction={{ sm: 'column', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }} justifyContent="space-evenly" sx={{paddingTop: 2}}>
                 <Paper sx={{backgroundColor:'rgba(245, 245, 245, .8)', p: 1, textAlign: 'center', width: {sm: '100%', md: '25%'}}} >
                     <Typography variant="h5" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif' sx={{color: 'rgb(74, 107, 74)'}}>
                     Languages 
