@@ -8,7 +8,7 @@ export default function AboutMe() {
         <div>
             <Typography variant="h2" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>About Me</Typography>
             <br />
-            <Stack direction={{ sm: 'column-reverse', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+            <Stack direction={{ xs: 'column-reverse', sm: 'column-reverse', md: 'row' }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                 <div>
                 <Typography variant="h6" fontFamily='"Georgia", "Helvetica", "Arial", sans-serif'>
                     Hi there! I'm Elise, a full-stack web developer currently residing in the San Francisco Bay Area. 
